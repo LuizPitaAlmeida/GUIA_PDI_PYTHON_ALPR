@@ -1,3 +1,5 @@
+![header](header.png)
+
 # Guia de Processamento Digital de Imagens em 
 # Linguagem de Programação Python
 
@@ -15,6 +17,7 @@ Esse repositório está organizado da seguinte forma:
 - [LICENSE](LICENSE): Licença MIT de uso e distribuição
 - [README.md](README.md): Guia para informações, instalação e uso
 - [get-docker.sh](get-docker.sh): Script de instalação do Docker
+- [header.png](header.png): Imagem do cabeçalho
 
 **Diretórios:**
 

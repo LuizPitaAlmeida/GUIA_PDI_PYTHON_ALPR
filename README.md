@@ -1,7 +1,8 @@
 # Guia de Processamento Digital de Imagens em 
-# Linguagem de Programação Python:
-# Estudo de caso em Reconhecimento Automático de 
-# Placas Veiculares
+# Linguagem de Programação Python
+
+**Estudo de caso em Reconhecimento Automático de**
+**Placas Veiculares**
 
 ## Descrição
 
@@ -35,17 +36,59 @@ automático de placas veiculares.
 
 Para facilitar a distribuição e instalação das dependencias e
 do ambiente desse guia. Foi elaborado uma imagem docker com o
-guia e suas dependencias. A instalação pode ser feita por meio
-dos script bash detalhado a seguir.
+guia e suas dependencias. A instalação em sistema Linux pode
+ser feita conforme os passos:
+
+1. Faça o download ou clone este repositorio em sua máquina
+   ```bash
+   git clone https://github.com/LuizPitaAlmeida/GUIA_PDI_PYTHON_ALPR.git
+   ```
+2. Acesse o repositório
+   ```bash
+   cd ./GUIA_PDI_PYTHON_ALPR
+   ```
+3. Execute o script de instalação
+   ```bash
+   bash -xe ./install_pdi_guide.sh
+   ```
 
 ## Uso
+
+Para utilizar basta acessar essa pasta e digitar o seguinte
+comando:
+
+```bash
+sudo docker run -it --rm -p 8888:8888 -v $PWD:/shared pdiguide
+```
 
 ## Extra
 
 O guia consta com alguns notebooks introdutórios ao uso de redes
-neurais com Tensorflow Keras e o uso de CNNs, como MobileNET SSD 
+neurais com Tensorflow Keras e o uso de CNNs, como MobileNET SSD
 e Yolo.
 
-## Diretório
+## Organização
+
+Esse repositório está organizado da seguinte forma:
+
+**Arquivos de controle, instalação e configuração:**
+
+- [install_pdi_guide.sh](install_pdi_guide.sh)
+- [Dockerfile](Dockerfile)
+- [MIT License](LICENSE)
+- [README.md](README.md)
+
+**Diretórios:**
+
+- [Data](./Data): Contém os arquivos de imagens
+- [Guia](./Guia): Contém os notebooks
 
 ## Referências
+
+### Database
+
+- Gabriel Resende Gonçalves, Sirlene Pio Gomes da Silva, David Menotti,
+  William Robson Schwartz (2016): Benchmark for License Plate Character
+  Segmentation. In: Journal of Electronic Imaging, 25 (5), pp. 1-5,
+  2016, ISBN: 1017-9909.
+- **Link:** <http://www.ssig.dcc.ufmg.br/wp-content/uploads/2016/11/JEI-2016-Benchmark.pdf>

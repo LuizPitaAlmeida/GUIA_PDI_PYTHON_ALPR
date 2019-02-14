@@ -15,10 +15,10 @@ sudo apt-get install curl
 # Install docker
 curl -fsSL https://get.docker.com -o get-docker.sh
 sudo bash get-docker.sh
-docker run --rm hello-world
+sudo docker run --rm hello-world
 
 # Build docker Guide image
-sudo docker build \\
+sudo docker build \
 --tag pdiguide --file Dockerfile .
 
 echo 'Done!'

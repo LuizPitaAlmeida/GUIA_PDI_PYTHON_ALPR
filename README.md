@@ -4,6 +4,23 @@
 **Estudo de caso em Reconhecimento Automático de**
 **Placas Veiculares**
 
+## Organização do repositório
+
+Esse repositório está organizado da seguinte forma:
+
+**Arquivos de controle, instalação e configuração:**
+
+- [install_pdi_guide.sh](install_pdi_guide.sh): Script de instalação
+- [Dockerfile](Dockerfile): Dockerfile da imagem do Guia
+- [LICENSE](LICENSE): Licença MIT de uso e distribuição
+- [README.md](README.md): Guia para informações, instalação e uso
+- [get-docker.sh](get-docker.sh): Script de instalação do Docker
+
+**Diretórios:**
+
+- [Data](./Data): Contém os arquivos de imagens
+- [Guia](./Guia): Contém os notebooks
+
 ## Descrição
 
 Esse guia é constituído de uma série de notebooks
@@ -52,6 +69,15 @@ ser feita conforme os passos:
    bash -xe ./install_pdi_guide.sh
    ```
 
+Esse script irá instalar o Docker e compilar a imagem do guia. Caso você já
+possua o Docker instalado em sua máquina ele irá pausar e possibilitar o
+cancelamento da operação (`CONTROL+C`). Nesse caso, após cancelar apenas execute
+o seguinte comando para compilar a imagem Docker do guia:
+
+```bash
+sudo docker build --tag pdiguide --file Dockerfile .
+```
+
 ## Uso
 
 Para utilizar basta acessar essa pasta e digitar o seguinte
@@ -61,27 +87,18 @@ comando:
 sudo docker run -it --rm -p 8888:8888 -v $PWD:/shared pdiguide
 ```
 
+Copie e cole o token gerado pelo Jupyter Notebook em seu navegador.
+O endereço será similar ao **exemplo**:
+
+<http://localhost:8888/?token=a9a031d049d096207383f5cb804178dc78f2ade02e4bcb05>
+
+Acesse a pasta Guia e divirta-se com os notebooks.
+
 ## Extra
 
 O guia consta com alguns notebooks introdutórios ao uso de redes
 neurais com Tensorflow Keras e o uso de CNNs, como MobileNET SSD
 e Yolo.
-
-## Organização
-
-Esse repositório está organizado da seguinte forma:
-
-**Arquivos de controle, instalação e configuração:**
-
-- [install_pdi_guide.sh](install_pdi_guide.sh)
-- [Dockerfile](Dockerfile)
-- [MIT License](LICENSE)
-- [README.md](README.md)
-
-**Diretórios:**
-
-- [Data](./Data): Contém os arquivos de imagens
-- [Guia](./Guia): Contém os notebooks
 
 ## Referências
 
